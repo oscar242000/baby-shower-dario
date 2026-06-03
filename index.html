@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baby Shower de Darío</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky-bg">
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="cloud cloud-three"></div>
+    <div class="coin coin-one">●</div>
+    <div class="coin coin-two">●</div>
+    <div class="coin coin-three">●</div>
+  </div>
+
+  <button class="music-btn" id="musicBtn" aria-label="Activar música">♪</button>
+
+  <header class="hero section">
+    <div class="badge">PRESS START</div>
+    <h1>Baby Shower de <span>Darío</span></h1>
+    <p class="hero-subtitle">¡Un nuevo jugador está por llegar!</p>
+    <p class="hero-text">Acompáñanos a celebrar con amor, juegos, risas y mucha emoción la llegada de nuestro bebé.</p>
+
+    <div class="hero-actions">
+      <a href="#confirmacion" class="btn primary">Confirmar asistencia</a>
+      <a href="#detalles" class="btn secondary">Ver detalles</a>
+    </div>
+
+    <div class="countdown" id="countdown">
+      <div><strong id="days">00</strong><span>Días</span></div>
+      <div><strong id="hours">00</strong><span>Horas</span></div>
+      <div><strong id="minutes">00</strong><span>Min</span></div>
+      <div><strong id="seconds">00</strong><span>Seg</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section cards-section" id="detalles">
+      <h2>Detalles del evento</h2>
+      <div class="cards-grid">
+        <article class="info-card block-card">
+          <span class="icon">📅</span>
+          <h3>Fecha</h3>
+          <p>Sábado 20 de julio de 2026</p>
+        </article>
+        <article class="info-card block-card">
+          <span class="icon">⏰</span>
+          <h3>Hora</h3>
+          <p>4:00 PM</p>
+        </article>
+        <article class="info-card pipe-card">
+          <span class="icon">📍</span>
+          <h3>Lugar</h3>
+          <p>Salón Jardín del Reino Champiñón</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section map-section">
+      <h2>Ubicación</h2>
+      <div class="map-card">
+        <iframe
+          title="Mapa del evento"
+          src="https://www.google.com/maps?q=Ciudad%20de%20Mexico&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="section agenda-section">
+      <h2>Agenda del Baby Shower</h2>
+      <div class="timeline">
+        <div class="timeline-item"><span>1</span><p><strong>Bienvenida</strong> al Reino Champiñón</p></div>
+        <div class="timeline-item"><span>2</span><p><strong>Juegos</strong> y dinámicas familiares</p></div>
+        <div class="timeline-item"><span>3</span><p><strong>Comida</strong> y mesa dulce</p></div>
+        <div class="timeline-item"><span>4</span><p><strong>Fotos</strong> con mamá y papá</p></div>
+        <div class="timeline-item"><span>5</span><p><strong>Mensaje especial</strong> para Darío</p></div>
+      </div>
+    </section>
+
+    <section class="section gifts-section">
+      <h2>Mesa de regalos</h2>
+      <p>Tu presencia es el regalo más bonito, pero si deseas apoyar a los futuros papás, puedes visitar nuestra mesa de regalos.</p>
+      <a class="btn primary" href="#" target="_blank" rel="noopener">Ver mesa de regalos</a>
+    </section>
+
+    <section class="section gallery-section">
+      <h2>Galería</h2>
+      <p>Espacio para colocar fotos de los futuros papás.</p>
+      <div class="gallery-grid">
+        <div class="photo-placeholder">Foto 1</div>
+        <div class="photo-placeholder">Foto 2</div>
+        <div class="photo-placeholder">Foto 3</div>
+      </div>
+    </section>
+
+    <section class="section rsvp-section" id="confirmacion">
+      <div class="castle-card">
+        <div class="bowser-inspired">
+          <div class="horn left"></div>
+          <div class="horn right"></div>
+          <div class="face">
+            <div class="eyes"><span></span><span></span></div>
+            <div class="smile"></div>
+          </div>
+        </div>
+        <div class="form-content">
+          <p class="mini-title">Bowser protege la lista de invitados</p>
+          <h2>Confirma tu asistencia</h2>
+          <form id="rsvpForm">
+            <label>Nombre completo
+              <input type="text" id="guestName" required placeholder="Escribe tu nombre" />
+            </label>
+
+            <label>Número de asistentes
+              <input type="number" id="guestCount" min="1" max="10" value="1" required />
+            </label>
+
+            <label>¿Asistirás?
+              <select id="attendance" required>
+                <option value="Sí asistiré">Sí asistiré</option>
+                <option value="No podré asistir">No podré asistir</option>
+              </select>
+            </label>
+
+            <label>Restricciones alimenticias
+              <input type="text" id="food" placeholder="Ej. vegetariano, alergias, ninguna" />
+            </label>
+
+            <label>Comentarios
+              <textarea id="comments" rows="4" placeholder="Déjale un mensaje bonito a Darío"></textarea>
+            </label>
+
+            <button type="submit" class="btn primary submit-btn">Entrar al Reino</button>
+          </form>
+          <div class="success-message" id="successMessage">¡Jugador agregado correctamente! 🪙</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Player 1: Mamá ❤️ Player 2: Papá</p>
+    <p>Darío Santiago · Baby Shower</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
