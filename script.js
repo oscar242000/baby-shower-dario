@@ -96,3 +96,23 @@ musicBtn.addEventListener('click', () => {
     clearInterval(intervalId);
   }
 });
+
+
+
+const startBtn = document.getElementById("startBtn");
+const intro = document.getElementById("intro");
+const bowserRunner = document.getElementById("bowserRunner");
+
+if (startBtn) {
+  startBtn.addEventListener("click", () => {
+    if (bowserRunner) {
+      bowserRunner.classList.add("run");
+    }
+
+    setTimeout(() => {
+      if (intro) {
+        intro.classList.add("hide");
+      }
+    }, 1200);
+  });
+}
