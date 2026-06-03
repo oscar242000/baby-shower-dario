@@ -21,6 +21,64 @@ body {
   overflow-x: hidden;
 }
 
+
+.castle-card {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  background: linear-gradient(135deg, #3b2a45, #6b3f36);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.bowser-image-container {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bowser-image {
+  width: 100%;
+  max-width: 350px;
+  image-rendering: pixelated;
+}
+
+.form-container {
+  flex: 1;
+  min-width: 320px;
+}
+
+.google-form {
+  width: 100%;
+  height: 750px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .castle-card {
+    flex-direction: column;
+  }
+
+  .bowser-image {
+    max-width: 220px;
+  }
+
+  .google-form {
+    height: 850px;
+  }
+}
+
+
+
+
 .sky-bg { position: fixed; inset: 0; pointer-events: none; z-index: -1; overflow: hidden; }
 .cloud { position: absolute; width: 130px; height: 45px; background: #fff; border-radius: 40px; opacity: .85; animation: drift 25s linear infinite; }
 .cloud:before, .cloud:after { content: ''; position: absolute; background: #fff; border-radius: 50%; }
